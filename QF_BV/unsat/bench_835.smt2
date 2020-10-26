@@ -1,0 +1,16 @@
+(set-info :smt-lib-version 2.6)
+(set-logic QF_BV)
+(set-info :source |
+ Patrice Godefroid, SAGE (systematic dynamic test generation)
+ For more information: http://research.microsoft.com/en-us/um/people/pg/public_psfiles/ndss2008.pdf
+|)
+(set-info :category "industrial")
+(set-info :status unsat)
+(declare-fun T4_478 () (_ BitVec 32))
+(declare-fun T1_478 () (_ BitVec 8))
+(declare-fun T1_479 () (_ BitVec 8))
+(declare-fun T1_480 () (_ BitVec 8))
+(declare-fun T1_481 () (_ BitVec 8))
+(assert (and true (= T4_478 (bvor (bvshl (bvor (bvshl (bvor (bvshl ((_ zero_extend 24) T1_481) (_ bv8 32)) ((_ zero_extend 24) T1_480)) (_ bv8 32)) ((_ zero_extend 24) T1_479)) (_ bv8 32)) ((_ zero_extend 24) T1_478))) (= T4_478 (_ bv0 32)) (bvsle T4_478 (_ bv8000 32)) (bvslt (_ bv0 32) T4_478) (bvule T4_478 (_ bv384000 32)) (bvult (_ bv0 32) T4_478) (= T4_478 (_ bv8000 32)) (not (= T4_478 (_ bv12000 32))) (not (= T4_478 (_ bv16000 32))) (not (= T4_478 (_ bv24000 32))) (not (= T4_478 (_ bv32000 32))) (not (= T4_478 (_ bv48000 32))) (not (= T4_478 (_ bv11025 32))) (not (= T4_478 (_ bv22050 32))) (not (= T4_478 (_ bv44100 32))) (bvule T4_478 (_ bv48000 32))))
+(check-sat)
+(exit)

@@ -1,0 +1,17 @@
+(set-info :smt-lib-version 2.6)
+(set-logic QF_BV)
+(set-info :source |
+ Patrice Godefroid, SAGE (systematic dynamic test generation)
+ For more information: http://research.microsoft.com/en-us/um/people/pg/public_psfiles/ndss2008.pdf
+|)
+(set-info :category "industrial")
+(set-info :status sat)
+(declare-fun T1_99272 () (_ BitVec 8))
+(declare-fun T1_99279 () (_ BitVec 8))
+(declare-fun T1_99282 () (_ BitVec 8))
+(declare-fun T1_99287 () (_ BitVec 8))
+(declare-fun T1_99296 () (_ BitVec 8))
+(declare-fun T1_99306 () (_ BitVec 8))
+(assert (let ((?v_9 (bvand (bvand ((_ zero_extend 24) T1_99272) (_ bv255 32)) (_ bv31 32)))) (let ((?v_11 (bvadd ?v_9 ((_ zero_extend 24) (_ bv1 8))))) (let ((?v_13 (bvadd ?v_11 (_ bv267 32))) (?v_0 ((_ zero_extend 24) (_ bv2 8)))) (let ((?v_4 (bvand (bvor (bvshl (bvand ((_ zero_extend 24) T1_99279) (_ bv255 32)) ?v_0) (_ bv3 32)) (_ bv7 32)))) (let ((?v_20 (bvadd ?v_4 (_ bv26 32))) (?v_3 (bvand (bvshl (bvand ((_ zero_extend 24) T1_99282) (_ bv255 32)) ?v_0) (_ bv7 32)))) (let ((?v_8 (bvadd ?v_3 (_ bv3 32)))) (let ((?v_19 (bvadd ?v_8 ?v_20))) (let ((?v_18 (bvadd ?v_19 (_ bv13 32))) (?v_2 (bvand (bvshl (bvand ((_ zero_extend 24) T1_99287) (_ bv255 32)) ?v_0) (_ bv7 32)))) (let ((?v_7 (bvadd ?v_2 (_ bv3 32)))) (let ((?v_17 (bvadd ?v_7 ?v_18))) (let ((?v_16 (bvadd ?v_17 (_ bv27 32))) (?v_1 (bvand (bvor (bvshl (bvand ((_ zero_extend 24) T1_99296) (_ bv255 32)) ?v_0) (_ bv3 32)) (_ bv7 32)))) (let ((?v_6 (bvadd ?v_1 (_ bv3 32)))) (let ((?v_15 (bvadd ?v_6 ?v_16))) (let ((?v_14 (bvadd ?v_15 (_ bv25 32))) (?v_5 (bvand (bvor (bvshl (bvand ((_ zero_extend 24) T1_99306) (_ bv255 32)) ?v_0) (_ bv3 32)) (_ bv127 32)))) (let ((?v_10 (bvadd ?v_5 (_ bv11 32)))) (let ((?v_12 (bvadd ?v_10 ?v_14))) (and true (bvsle ?v_13 (bvadd ?v_12 (_ bv27 32))) (not (= ?v_1 (_ bv4294967295 32))) (not (= ?v_2 (_ bv4294967295 32))) (not (= ?v_3 (_ bv4294967295 32))) (bvslt (_ bv0 32) (bvadd ?v_4 (_ bv3 32))) (not (= ?v_5 (_ bv4294967295 32))) (bvslt (_ bv0 32) ?v_6) (bvslt (_ bv0 32) ?v_7) (bvslt (_ bv0 32) ?v_8) (not (= ?v_4 (_ bv4294967295 32))) (not (= ?v_9 (_ bv4294967295 32))) (bvslt (_ bv0 32) ?v_10) (bvsle ?v_11 (_ bv30 32)) (bvsle (bvadd ?v_12 (_ bv14 32)) ?v_13) (bvslt ?v_12 ?v_13) (bvsle ?v_12 ?v_13) (bvslt ?v_14 ?v_13) (bvsle (bvadd ?v_15 (_ bv24 32)) ?v_13) (bvslt ?v_15 ?v_13) (bvsle ?v_15 ?v_13) (bvslt ?v_16 ?v_13) (bvsle (bvadd ?v_17 (_ bv17 32)) ?v_13) (bvslt ?v_17 ?v_13) (bvsle ?v_17 ?v_13) (bvslt ?v_18 ?v_13) (bvsle (bvadd ?v_19 (_ bv12 32)) ?v_13) (bvsle (bvadd ?v_19 (_ bv7 32)) ?v_13) (bvslt ?v_19 ?v_13) (bvsle ?v_19 ?v_13) (bvslt ?v_20 ?v_13) (bvsle (bvadd ?v_4 (_ bv25 32)) ?v_13) (bvslt (_ bv0 32) ?v_13)))))))))))))))))))
+(check-sat)
+(exit)

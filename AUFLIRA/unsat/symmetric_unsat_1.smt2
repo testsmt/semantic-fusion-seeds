@@ -1,0 +1,16 @@
+(set-info :smt-lib-version 2.6)
+(set-logic AUFLIRA)
+(set-info :source | Example extracted from Peter Baumgartner's talk at CADE-21: Logical Engineering with Instance-Based Methods.
+
+It was translated to SMT-LIB by Leonardo de Moura |)
+(set-info :category "crafted")
+(set-info :status unsat)
+(declare-fun symmetric ((Array Int (Array Int Real)) Int) Bool)
+(declare-fun n () Int)
+(declare-fun a0 () (Array Int (Array Int Real)))
+(declare-fun e0 () Real)
+(assert (forall ((?a (Array Int (Array Int Real))) (?n Int)) (= (symmetric ?a ?n) (forall ((?i Int) (?j Int)) (=> (and (<= 1 ?i) (<= ?i ?n) (<= 1 ?j) (<= ?j ?n)) (= (select (select ?a ?i) ?j) (select (select ?a ?j) ?i)))))))
+(assert (symmetric a0 n))
+(assert (not (symmetric a0 n)))
+(check-sat)
+(exit)

@@ -1,0 +1,17 @@
+(set-info :smt-lib-version 2.6)
+(set-logic QF_BV)
+(set-info :source |
+ Patrice Godefroid, SAGE (systematic dynamic test generation)
+ For more information: http://research.microsoft.com/en-us/um/people/pg/public_psfiles/ndss2008.pdf
+|)
+(set-info :category "industrial")
+(set-info :status unsat)
+(declare-fun T1_1993 () (_ BitVec 8))
+(declare-fun T1_1994 () (_ BitVec 8))
+(declare-fun T1_1451 () (_ BitVec 8))
+(declare-fun T1_1452 () (_ BitVec 8))
+(declare-fun T1_1453 () (_ BitVec 8))
+(declare-fun T1_1454 () (_ BitVec 8))
+(assert (let ((?v_4 ((_ zero_extend 24) (_ bv1 8))) (?v_3 ((_ zero_extend 24) (_ bv2 8))) (?v_0 (bvsub ((_ zero_extend 24) T1_1993) (_ bv48 32)))) (let ((?v_1 (bvadd ((_ zero_extend 24) T1_1994) (bvshl (bvadd ?v_0 (bvshl ?v_0 ?v_3)) ?v_4)))) (let ((?v_13 (bvsub ?v_1 (_ bv49 32)))) (let ((?v_14 (bvule ?v_13 (_ bv4294967294 32))) (?v_10 (bvsub ?v_1 (_ bv48 32))) (?v_12 (bvadd ?v_1 (_ bv41772624 32))) (?v_2 (bvsub ((_ zero_extend 24) T1_1451) (_ bv48 32)))) (let ((?v_5 (bvsub (bvadd ((_ zero_extend 24) T1_1452) (bvshl (bvadd ?v_2 (bvshl ?v_2 ?v_3)) ?v_4)) (_ bv48 32)))) (let ((?v_6 (bvsub (bvadd ((_ zero_extend 24) T1_1453) (bvshl (bvadd ?v_5 (bvshl ?v_5 ?v_3)) ?v_4)) (_ bv48 32)))) (let ((?v_8 (bvadd ((_ zero_extend 24) T1_1454) (bvshl (bvadd ?v_6 (bvshl ?v_6 ?v_3)) ?v_4)))) (let ((?v_9 (bvadd ?v_8 (_ bv83 32)))) (let ((?v_11 (bvadd ?v_10 ?v_9)) (?v_7 (bvsub ?v_8 (_ bv48 32)))) (and true (bvslt (bvand (bvand (bvand (bvsub (_ bv511 32) ?v_13) (_ bv0 32)) (_ bv0 32)) (_ bv0 32)) (_ bv0 32)) (not (= (bvsub ((_ zero_extend 24) (_ bv0 8)) (bvsub (_ bv0 32) ((_ zero_extend 24) (ite (bvult (_ bv41772672 32) ?v_12) (_ bv1 8) (_ bv0 8))))) (_ bv0 32))) (not (= ?v_7 (_ bv4294967295 32))) (bvule (_ bv0 32) ?v_7) (bvult (bvashr (bvsub ?v_1 (_ bv52 32)) ?v_3) (_ bv8 32)) (bvult (bvadd ?v_9 ?v_10) (bvadd ?v_8 (_ bv339 32))) (not (= ?v_9 (_ bv4294967295 32))) (bvule (_ bv0 32) ?v_9) (bvult ?v_9 ?v_11) (not (= ?v_11 (_ bv4294967295 32))) (bvule (_ bv0 32) ?v_11) (bvult (_ bv41772691 32) ?v_12) (bvule (_ bv0 32) (bvsub ?v_1 (_ bv53 32))) (bvule (bvadd ?v_1 (_ bv41713592 32)) (_ bv41772673 32)) (bvult ?v_10 (_ bv512 32)) (bvule ?v_10 (_ bv4294967295 32)) (not (= ?v_10 (_ bv0 32))) (bvult ?v_13 (_ bv256 32)) ?v_14 ?v_14 (bvult ?v_13 (_ bv511 32)) (not (= ?v_13 (_ bv0 32))))))))))))))
+(check-sat)
+(exit)

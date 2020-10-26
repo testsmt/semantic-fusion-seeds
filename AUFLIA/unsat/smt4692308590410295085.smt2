@@ -1,0 +1,110 @@
+(set-info :smt-lib-version 2.6)
+(set-logic AUFLIA)
+(set-info :source |Generator: Rodin SMT Plug-in|)
+(set-info :license "https://creativecommons.org/licenses/by-nc/4.0/")
+(set-info :category "industrial")
+(set-info :status unsat)
+
+(declare-sort Color 0)
+(declare-fun a () Int)
+(declare-fun b () Int)
+(declare-fun c () Int)
+(declare-fun d () Int)
+(declare-fun green () Color)
+(declare-fun il_pass () Int)
+(declare-fun il_tl () Color)
+(declare-fun ml_pass () Int)
+(declare-fun ml_tl () Color)
+(declare-fun n () Int)
+(declare-fun red () Color)
+
+(assert (! (or 
+               (= ml_tl red) 
+               (= ml_tl green))
+         :named hyp1))
+(assert (! (or 
+               (= il_tl red) 
+               (= il_tl green))
+         :named hyp2))
+(assert (! (=> 
+               (= ml_tl green) 
+               (= c 0))
+         :named hyp3))
+(assert (! (=> 
+               (= ml_tl green) 
+               (< (+ a b c) d))
+         :named hyp4))
+(assert (! (or 
+               (= il_pass 0) 
+               (= il_pass 1))
+         :named hyp5))
+(assert (! (or 
+               (= ml_pass 0) 
+               (= ml_pass 1))
+         :named hyp6))
+(assert (! (=> 
+               (= ml_tl red) 
+               (= ml_pass 1))
+         :named hyp7))
+(assert (! (=> 
+               (= il_tl red) 
+               (= il_pass 1))
+         :named hyp8))
+(assert (! (or 
+               (= il_tl red) 
+               (= ml_tl red))
+         :named hyp9))
+(assert (! (=> 
+               (<= a 0) 
+               (= a 0))
+         :named hyp10))
+(assert (! (<= b 0)
+         :named hyp11))
+(assert (! (or 
+               (< 0 c) 
+               (< 0 a) 
+               (and 
+                   (< (+ a b) d) 
+                   (= c 0)))
+         :named hyp12))
+(assert (! (not 
+               (= il_tl green))
+         :named hyp13))
+(assert (! (<= 0 d)
+         :named hyp14))
+(assert (! (< 0 d)
+         :named hyp15))
+(assert (! (forall ((x Color)) 
+               (or 
+                   (= x green) 
+                   (= x red)))
+         :named hyp16))
+(assert (! (<= n d)
+         :named hyp17))
+(assert (! (or 
+               (< 0 n) 
+               (< n d))
+         :named hyp18))
+(assert (! (<= 0 a)
+         :named hyp19))
+(assert (! (<= 0 b)
+         :named hyp20))
+(assert (! (<= 0 c)
+         :named hyp21))
+(assert (! (= n (+ a b c))
+         :named hyp22))
+(assert (! (or 
+               (= a 0) 
+               (= c 0))
+         :named hyp23))
+(assert (! (<= 0 (+ a b c))
+         :named hyp24))
+(assert (! (not 
+               (= green red))
+         :named hyp25))
+(assert (! (not 
+               (= b 0))
+         :named goal))
+(check-sat)
+(exit)
+

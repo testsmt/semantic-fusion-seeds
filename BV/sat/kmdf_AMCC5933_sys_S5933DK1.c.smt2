@@ -1,0 +1,11 @@
+(set-info :smt-lib-version 2.6)
+(set-logic BV)
+(set-info :source | Software ranking function synthesis problems.
+These benchmarks stem from an evaluation described in Wintersteiger, Hamadi, de Moura: Efficiently solving quantified bit-vector formulas, FMSD 42(1), 2013.
+The software models that were used are from a previous evaluation of termination proving tools described in Cook, Kroening, Ruemmer, Wintersteiger: Ranking Function Synthesis for Bit-Vector Relations, TACAS 2010.
+ |)
+(set-info :category "industrial")
+(set-info :status sat)
+(assert (exists ((c__S5933DK1__main__1__numxfer_36_C (_ BitVec 32))) (exists ((c__S5933DK1__main__1__Item_u_DmaWork_nbytes_36_C (_ BitVec 32))) (forall ((termination__pre__0__c__S5933DK1__main__1__Item_u_DmaWork_nbytes (_ BitVec 32))) (forall ((termination__pre__0__c__S5933DK1__main__1__numxfer (_ BitVec 32))) (forall ((c__S5933DK1__main__1__Item_u_DmaWork_nbytes_35_0 (_ BitVec 32))) (forall ((c__S5933DK1__main__1__numxfer_35_0 (_ BitVec 32))) (forall ((c__S5933DK1__main__1__Item_u_DmaWork_nbytes (_ BitVec 32))) (forall ((c__S5933DK1__main__1__numxfer (_ BitVec 32))) (=> (and (= termination__pre__0__c__S5933DK1__main__1__numxfer c__S5933DK1__main__1__numxfer_35_0) (= termination__pre__0__c__S5933DK1__main__1__Item_u_DmaWork_nbytes c__S5933DK1__main__1__Item_u_DmaWork_nbytes_35_0) (not (= c__S5933DK1__main__1__Item_u_DmaWork_nbytes_35_0 (_ bv0 32))) (= c__S5933DK1__main__1__Item_u_DmaWork_nbytes_35_0 (_ bv3 32)) (= c__S5933DK1__main__1__numxfer (_ bv3 32)) (= c__S5933DK1__main__1__Item_u_DmaWork_nbytes (bvsub c__S5933DK1__main__1__Item_u_DmaWork_nbytes_35_0 c__S5933DK1__main__1__numxfer))) (bvslt (bvadd ((_ sign_extend 2) (bvmul ((_ sign_extend 33) c__S5933DK1__main__1__numxfer_36_C) ((_ zero_extend 33) c__S5933DK1__main__1__numxfer))) ((_ sign_extend 2) (bvmul ((_ sign_extend 33) c__S5933DK1__main__1__Item_u_DmaWork_nbytes_36_C) ((_ zero_extend 33) c__S5933DK1__main__1__Item_u_DmaWork_nbytes)))) (bvadd ((_ sign_extend 2) (bvmul ((_ sign_extend 33) c__S5933DK1__main__1__numxfer_36_C) ((_ zero_extend 33) termination__pre__0__c__S5933DK1__main__1__numxfer))) ((_ sign_extend 2) (bvmul ((_ sign_extend 33) c__S5933DK1__main__1__Item_u_DmaWork_nbytes_36_C) ((_ zero_extend 33) termination__pre__0__c__S5933DK1__main__1__Item_u_DmaWork_nbytes)))))) ) ) ) ) ) ) ) ))
+(check-sat)
+(exit)

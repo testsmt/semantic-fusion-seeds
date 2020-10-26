@@ -1,0 +1,11 @@
+(set-info :smt-lib-version 2.6)
+(set-logic BV)
+(set-info :source | Software ranking function synthesis problems.
+These benchmarks stem from an evaluation described in Wintersteiger, Hamadi, de Moura: Efficiently solving quantified bit-vector formulas, FMSD 42(1), 2013.
+The software models that were used are from a previous evaluation of termination proving tools described in Cook, Kroening, Ruemmer, Wintersteiger: Ranking Function Synthesis for Bit-Vector Relations, TACAS 2010.
+ |)
+(set-info :category "industrial")
+(set-info :status unsat)
+(assert (exists ((c__dump__main__1__pch_36_C (_ BitVec 32))) (exists ((c__dump__main__1__i_36_C (_ BitVec 32))) (forall ((termination__pre__1__c__dump__main__1__pch (_ BitVec 32))) (forall ((termination__pre__1__c__dump__main__1__i (_ BitVec 32))) (forall ((c__dump__main__1__pch_35_0 (_ BitVec 32))) (forall ((c__dump__main__1__pch_35_1 (_ BitVec 32))) (forall ((c__dump__main__1__i_35_0 (_ BitVec 32))) (forall ((c__dump__main__1__cd_wTotalLength (_ BitVec 8))) (forall ((c__dump__main__1__id_bLength (_ BitVec 8))) (forall ((c__dump__main__1__buf (_ BitVec 32))) (forall ((termination__nondet1 (_ BitVec 32))) (forall ((c__dump__main__1__pch (_ BitVec 32))) (forall ((c__dump__main__1__i (_ BitVec 32))) (=> (and (= termination__pre__1__c__dump__main__1__i c__dump__main__1__i_35_0) (= termination__pre__1__c__dump__main__1__pch c__dump__main__1__pch_35_0) (= c__dump__main__1__pch_35_1 (bvadd c__dump__main__1__pch_35_0 ((_ zero_extend 24) c__dump__main__1__id_bLength))) (= c__dump__main__1__pch termination__nondet1) (= c__dump__main__1__i (bvsub c__dump__main__1__pch c__dump__main__1__buf)) (not (bvuge c__dump__main__1__i ((_ zero_extend 24) c__dump__main__1__cd_wTotalLength)))) (bvslt (bvadd ((_ sign_extend 2) (bvmul ((_ sign_extend 33) c__dump__main__1__i_36_C) ((_ zero_extend 33) c__dump__main__1__i))) ((_ sign_extend 2) (bvmul ((_ sign_extend 33) c__dump__main__1__pch_36_C) ((_ zero_extend 33) c__dump__main__1__pch)))) (bvadd ((_ sign_extend 2) (bvmul ((_ sign_extend 33) c__dump__main__1__i_36_C) ((_ zero_extend 33) termination__pre__1__c__dump__main__1__i))) ((_ sign_extend 2) (bvmul ((_ sign_extend 33) c__dump__main__1__pch_36_C) ((_ zero_extend 33) termination__pre__1__c__dump__main__1__pch)))))) ) ) ) ) ) ) ) ) ) ) ) ) ))
+(check-sat)
+(exit)

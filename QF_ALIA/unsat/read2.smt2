@@ -1,0 +1,35 @@
+(set-info :smt-lib-version 2.6)
+(set-logic QF_ALIA)
+(set-info :source |
+Translated from old SVC processor verification benchmarks.  Contact Clark
+Barrett at barrett@cs.nyu.edu for more information.
+
+This benchmark was automatically translated into SMT-LIB format from
+CVC format using CVC Lite
+|)
+(set-info :category "crafted")
+(set-info :status unsat)
+(declare-fun a () Int)
+(declare-fun a_prime () Int)
+(declare-fun v_prime () Int)
+(declare-fun S_prime () (Array Int Int))
+(declare-fun v () Int)
+(declare-fun S () (Array Int Int))
+(declare-fun aaa () (Array Int Int))
+(declare-fun bS () (Array Int Int))
+(declare-fun bz () Int)
+(declare-fun ba () Int)
+(declare-fun bv () Int)
+(declare-fun aa () (Array Int Int))
+(declare-fun zz () Int)
+(declare-fun c () (Array Int Int))
+(declare-fun x () Int)
+(declare-fun y () Int)
+(declare-fun S1 () (Array Int Int))
+(declare-fun a1 () Int)
+(declare-fun v1 () Int)
+(declare-fun a2 () Int)
+(declare-fun v2 () Int)
+(assert (let ((?v_0 (select S a)) (?v_1 (= a a_prime)) (?v_2 (+ bz ba)) (?v_4 (select aa zz))) (let ((?v_5 (= ?v_0 v)) (?v_3 (+ x y))) (not (ite (ite (ite (ite (= (ite ?v_1 v_prime (select S_prime a)) v) (= (store (store S_prime a_prime v_prime) a ?v_0) S) false) (ite ?v_5 (= (select S_prime a_prime) v_prime) false) false) (ite (= S S_prime) (ite (ite ?v_1 (= v v_prime) true) (ite (ite ?v_1 false true) (= (select S a_prime) v_prime) true) false) false) true) (ite (ite (ite (= aaa (store bS ?v_2 bv)) (ite (= aa (store bS ?v_2 ?v_4)) (ite (= (select c ?v_2) bv) (= bS (store c ?v_2 (select bS ?v_2))) false) false) false) (ite (ite (= ba (+ ?v_3 (* (- 1) bz))) (= (select aaa ?v_3) bv) true) (= (select aa ?v_2) ?v_4) false) true) (ite (ite (= S S1) (= (select S1 a) ?v_0) true) (ite (= (store (store (store S a v) a1 v1) a2 v2) S) (ite (= (select S a2) v2) (ite (ite (ite (= a a1) false true) (ite (= a a2) false true) false) ?v_5 true) false) true) false) false) false)))))
+(check-sat)
+(exit)

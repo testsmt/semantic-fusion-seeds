@@ -1,0 +1,33 @@
+(set-info :smt-lib-version 2.6)
+(set-logic LRA)
+(set-info :source |
+   Monniaux, David; Quantifier Elimination by Lazy Model Enumeration, CAV 2010
+|)
+(set-info :category "random")
+; ./Mjollnir_examples/B6/formula_006.m
+(set-info :status unsat)
+(assert
+ (forall ((|v17:0| Real) )(forall ((|v16:1| Real) )(forall ((|v15:2| Real) )(forall ((|v14:3| Real) )(forall ((|v13:4| Real) )(forall ((|v12:5| Real) )(exists ((|v11:6| Real) )(exists ((|v10:7| Real) )(exists ((|v9:8| Real) )(exists ((|v8:9| Real) )(exists ((|v7:10| Real) )(exists ((|v6:11| Real) )(forall ((|v5:12| Real) )(forall ((|v4:13| Real) )(forall ((|v3:14| Real) )(forall ((|v2:15| Real) )(forall ((|v1:16| Real) )(forall ((|v0:17| Real) )(let ((?x21 (+ (+ (* 3 |v10:7|) (* (- 3) |v17:0|)) (* (- 14) |v6:11|))))
+(let ((?x33 (+ (+ (+ ?x21 |v1:16|) (* 2 |v2:15|)) (* (- 10) |v16:1|))))
+(<= (+ ?x33 (* (- 16) |v10:7|)) (- 5)))))
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+(check-sat)
+(exit)
+

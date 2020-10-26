@@ -1,0 +1,48 @@
+(set-info :smt-lib-version 2.6)
+(set-logic QF_AX)
+(set-info :source |
+Benchmarks used in the followin paper:
+Big proof engines as little proof engines: new results on rewrite-based satisfiability procedure
+Alessandro Armando, Maria Paola Bonacina, Silvio Ranise, Stephan Schulz. 
+PDPAR'05
+http://www.ai.dist.unige.it/pdpar05/
+
+
+|)
+(set-info :category "crafted")
+(set-info :status sat)
+(declare-sort Index 0)
+(declare-sort Element 0)
+(declare-fun a_215 () (Array Index Element))
+(declare-fun a_217 () (Array Index Element))
+(declare-fun a_219 () (Array Index Element))
+(declare-fun a_220 () (Array Index Element))
+(declare-fun a_222 () (Array Index Element))
+(declare-fun a_224 () (Array Index Element))
+(declare-fun a_225 () (Array Index Element))
+(declare-fun a_226 () (Array Index Element))
+(declare-fun e_214 () Element)
+(declare-fun e_216 () Element)
+(declare-fun e_218 () Element)
+(declare-fun e_221 () Element)
+(declare-fun e_223 () Element)
+(declare-fun a1 () (Array Index Element))
+(declare-fun i0 () Index)
+(declare-fun i1 () Index)
+(declare-fun i2 () Index)
+(assert (= a_215 (store a1 i1 e_214)))
+(assert (= a_217 (store a_215 i2 e_216)))
+(assert (= a_219 (store a_217 i0 e_218)))
+(assert (= a_220 (store a_219 i0 e_218)))
+(assert (= a_222 (store a_220 i0 e_221)))
+(assert (= a_224 (store a_222 i1 e_223)))
+(assert (= a_225 (store a_220 i1 e_221)))
+(assert (= a_226 (store a_225 i1 e_221)))
+(assert (= e_214 (select a1 i2)))
+(assert (= e_216 (select a1 i1)))
+(assert (= e_218 (select a_217 i0)))
+(assert (= e_221 (select a_220 i1)))
+(assert (= e_223 (select a_220 i0)))
+(assert (not (= a_224 a_226)))
+(check-sat)
+(exit)

@@ -1,0 +1,11 @@
+(set-info :smt-lib-version 2.6)
+(set-logic BV)
+(set-info :source | Software ranking function synthesis problems.
+These benchmarks stem from an evaluation described in Wintersteiger, Hamadi, de Moura: Efficiently solving quantified bit-vector formulas, FMSD 42(1), 2013.
+The software models that were used are from a previous evaluation of termination proving tools described in Cook, Kroening, Ruemmer, Wintersteiger: Ranking Function Synthesis for Bit-Vector Relations, TACAS 2010.
+ |)
+(set-info :category "industrial")
+(set-info :status sat)
+(assert (exists ((c__io__main__1__bitPos_36_C (_ BitVec 32))) (exists ((c__io__main__1__numSamplesThisPacket_36_C (_ BitVec 32))) (forall ((termination__pre__0__c__io__main__1__bitPos (_ BitVec 32))) (forall ((termination__pre__0__c__io__main__1__numSamplesThisPacket (_ BitVec 32))) (forall ((c__io__main__1__bitPos_35_0 (_ BitVec 32))) (forall ((c__io__main__1__numSamplesThisPacket_35_0 (_ BitVec 32))) (forall ((c__io__main__1__bitPos (_ BitVec 32))) (forall ((c__io__main__1__numSamplesThisPacket (_ BitVec 32))) (=> (and (= termination__pre__0__c__io__main__1__numSamplesThisPacket c__io__main__1__numSamplesThisPacket_35_0) (= termination__pre__0__c__io__main__1__bitPos c__io__main__1__bitPos_35_0) (bvsgt c__io__main__1__numSamplesThisPacket_35_0 (_ bv0 32)) (not (bvult (bvadd c__io__main__1__bitPos_35_0 c__io__main__1__numSamplesThisPacket_35_0) (_ bv8 32))) (= c__io__main__1__numSamplesThisPacket (bvsub c__io__main__1__numSamplesThisPacket_35_0 (bvsub (_ bv8 32) c__io__main__1__bitPos_35_0))) (= c__io__main__1__bitPos (_ bv0 32))) (bvslt (bvadd ((_ sign_extend 3) (bvmul ((_ sign_extend 32) c__io__main__1__numSamplesThisPacket_36_C) ((_ sign_extend 32) c__io__main__1__numSamplesThisPacket))) ((_ sign_extend 2) (bvmul ((_ sign_extend 33) c__io__main__1__bitPos_36_C) ((_ zero_extend 33) c__io__main__1__bitPos)))) (bvadd ((_ sign_extend 3) (bvmul ((_ sign_extend 32) c__io__main__1__numSamplesThisPacket_36_C) ((_ sign_extend 32) termination__pre__0__c__io__main__1__numSamplesThisPacket))) ((_ sign_extend 2) (bvmul ((_ sign_extend 33) c__io__main__1__bitPos_36_C) ((_ zero_extend 33) termination__pre__0__c__io__main__1__bitPos)))))) ) ) ) ) ) ) ) ))
+(check-sat)
+(exit)

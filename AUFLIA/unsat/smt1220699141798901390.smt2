@@ -1,0 +1,85 @@
+(set-info :smt-lib-version 2.6)
+(set-logic AUFLIA)
+(set-info :source |Generator: Rodin SMT Plug-in|)
+(set-info :license "https://creativecommons.org/licenses/by-nc/4.0/")
+(set-info :category "industrial")
+(set-info :status unsat)
+
+(declare-sort Color 0)
+(declare-fun a () Int)
+(declare-fun b () Int)
+(declare-fun c () Int)
+(declare-fun d () Int)
+(declare-fun green () Color)
+(declare-fun il_pass () Int)
+(declare-fun il_tl () Color)
+(declare-fun ml_pass () Int)
+(declare-fun ml_tl () Color)
+(declare-fun n () Int)
+(declare-fun red () Color)
+
+(assert (! (= il_tl green)
+         :named hyp1))
+(assert (! (< 1 b)
+         :named hyp2))
+(assert (! (= a 0)
+         :named hyp3))
+(assert (! (< 0 b)
+         :named hyp4))
+(assert (! (forall ((x Color)) 
+               (or 
+                   (= x green) 
+                   (= x red)))
+         :named hyp5))
+(assert (! (<= 0 a)
+         :named hyp6))
+(assert (! (<= 0 b)
+         :named hyp7))
+(assert (! (= n (+ a b c))
+         :named hyp8))
+(assert (! (<= 0 (+ a b c))
+         :named hyp9))
+(assert (! (or 
+               (= ml_tl red) 
+               (= ml_tl green))
+         :named hyp10))
+(assert (! (or 
+               (= il_tl red) 
+               (= il_tl green))
+         :named hyp11))
+(assert (! (=> 
+               (= ml_tl green) 
+               (= c 0))
+         :named hyp12))
+(assert (! (=> 
+               (= ml_tl green) 
+               (< (+ a b c) d))
+         :named hyp13))
+(assert (! (=> 
+               (= ml_tl red) 
+               (= ml_pass 1))
+         :named hyp14))
+(assert (! (=> 
+               (= il_tl red) 
+               (= il_pass 1))
+         :named hyp15))
+(assert (! (or 
+               (= il_tl red) 
+               (= ml_tl red))
+         :named hyp16))
+(assert (! (not 
+               (= green red))
+         :named hyp17))
+(assert (! (=> 
+               (and 
+                   (<= d (+ b 1)) 
+                   (not 
+                       (= (+ b 1) d))) 
+               (<= d b))
+         :named hyp18))
+(assert (! (not 
+               (< 0 (- b 1)))
+         :named goal))
+(check-sat)
+(exit)
+

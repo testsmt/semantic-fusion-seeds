@@ -1,0 +1,15 @@
+(set-info :smt-lib-version 2.6)
+(set-logic QF_BV)
+(set-info :source |
+ Patrice Godefroid, SAGE (systematic dynamic test generation)
+ For more information: http://research.microsoft.com/en-us/um/people/pg/public_psfiles/ndss2008.pdf
+|)
+(set-info :category "industrial")
+(set-info :status sat)
+(declare-fun T2_5294 () (_ BitVec 16))
+(declare-fun T1_5285 () (_ BitVec 8))
+(declare-fun T1_5294 () (_ BitVec 8))
+(declare-fun T1_5295 () (_ BitVec 8))
+(assert (let ((?v_1 ((_ zero_extend 24) T1_5285))) (let ((?v_0 (bvadd ?v_1 (_ bv1 32)))) (let ((?v_2 (bvadd (bvadd ?v_0 (_ bv4266174 32)) ((_ zero_extend 16) T2_5294)))) (and true (= T2_5294 (bvor (bvshl ((_ zero_extend 8) T1_5295) (_ bv8 16)) ((_ zero_extend 8) T1_5294))) (bvult (_ bv4266998 32) (bvadd (bvadd ?v_2 (_ bv6 32)) (_ bv1 32))) (bvule (bvadd (bvadd ?v_0 (_ bv4266172 32)) (_ bv2 32)) (_ bv4266998 32)) (not (= ?v_1 (_ bv1 32))) (bvule (bvsub ?v_2 (_ bv4266152 32)) (_ bv846 32)))))))
+(check-sat)
+(exit)

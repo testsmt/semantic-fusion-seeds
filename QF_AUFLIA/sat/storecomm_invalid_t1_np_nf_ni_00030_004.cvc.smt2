@@ -1,0 +1,47 @@
+(set-info :smt-lib-version 2.6)
+(set-logic QF_AUFLIA)
+(set-info :source |
+Benchmarks used in the followin paper:
+Big proof engines as little proof engines: new results on rewrite-based satisfiability procedure
+Alessandro Armando, Maria Paola Bonacina, Silvio Ranise, Stephan Schulz. 
+PDPAR'05
+http://www.ai.dist.unige.it/pdpar05/
+
+
+|)
+(set-info :category "crafted")
+(set-info :status sat)
+(declare-fun a1 () (Array Int Int))
+(declare-fun e1 () Int)
+(declare-fun e10 () Int)
+(declare-fun e11 () Int)
+(declare-fun e12 () Int)
+(declare-fun e13 () Int)
+(declare-fun e14 () Int)
+(declare-fun e15 () Int)
+(declare-fun e16 () Int)
+(declare-fun e17 () Int)
+(declare-fun e18 () Int)
+(declare-fun e19 () Int)
+(declare-fun e2 () Int)
+(declare-fun e20 () Int)
+(declare-fun e21 () Int)
+(declare-fun e22 () Int)
+(declare-fun e23 () Int)
+(declare-fun e24 () Int)
+(declare-fun e25 () Int)
+(declare-fun e26 () Int)
+(declare-fun e27 () Int)
+(declare-fun e28 () Int)
+(declare-fun e29 () Int)
+(declare-fun e3 () Int)
+(declare-fun e30 () Int)
+(declare-fun e4 () Int)
+(declare-fun e5 () Int)
+(declare-fun e6 () Int)
+(declare-fun e7 () Int)
+(declare-fun e8 () Int)
+(declare-fun e9 () Int)
+(assert (not (= (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store a1 1 e1) 2 e2) 3 e3) 4 e4) 5 e5) 6 e6) 7 e7) 8 e8) 9 e9) 10 e10) 11 e11) 12 e12) 13 e13) 14 e14) 15 e15) 16 e16) 17 e17) 18 e18) 19 e19) 20 e20) 21 e21) 22 e22) 23 e23) 24 e24) 25 e25) 26 e26) 27 e27) 28 e28) 29 e29) 1 e1) (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store (store a1 21 e21) 13 e13) 4 e4) 12 e12) 19 e19) 6 e6) 3 e3) 7 e7) 18 e18) 24 e24) 5 e5) 14 e14) 29 e29) 9 e9) 11 e11) 2 e2) 25 e25) 8 e8) 26 e26) 1 e1) 27 e27) 23 e23) 17 e17) 30 e30) 15 e15) 20 e20) 28 e28) 10 e10) 22 e22) 16 e16))))
+(check-sat)
+(exit)

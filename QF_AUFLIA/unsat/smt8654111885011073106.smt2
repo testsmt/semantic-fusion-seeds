@@ -1,0 +1,27 @@
+(set-info :smt-lib-version 2.6)
+(set-logic QF_AUFLIA)
+(set-info :source |Generator: Rodin SMT Plug-in|)
+(set-info :license "https://creativecommons.org/licenses/by-nc/4.0/")
+(set-info :category "industrial")
+(set-info :status unsat)
+
+(declare-sort Color 0)
+(declare-fun a () Int)
+(declare-fun b () Int)
+(declare-fun green () Color)
+(declare-fun il_tl () Color)
+
+(assert (! (= il_tl green)
+         :named hyp1))
+(assert (! (< 1 b)
+         :named hyp2))
+(assert (! (= a 0)
+         :named hyp3))
+(assert (! (< 0 b)
+         :named hyp4))
+(assert (! (not 
+               (< 0 (- b 1)))
+         :named goal))
+(check-sat)
+(exit)
+

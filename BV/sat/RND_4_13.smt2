@@ -1,0 +1,21 @@
+(set-info :smt-lib-version 2.6)
+(set-logic BV)
+(set-info :source |
+   Scholl, Christoph; Disch, Stefan; Pigorsch, Florian and Kupferschmid, 
+   Stefan; Using an SMT Solver and Craig Interpolation to Detect and Remove 
+   Redundant Linear Constraints in Representations of Non-Convex Polyhedra.
+   Proceedings of 6th International Workshop on Satisfiability Modulo
+   Theories, Princeton, USA, July 2008.
+   <http://abs.informatik.uni-freiburg.de/smtbench/>
+
+Translated to BV by Mathias Preiner.
+|)
+(set-info :license "https://creativecommons.org/licenses/by/4.0/")
+(set-info :category "random")
+(set-info :status sat)
+(declare-fun y3 () (_ BitVec 32))
+(declare-fun y4 () (_ BitVec 32))
+(declare-fun x1 () (_ BitVec 32))
+(assert (forall ((?y3 (_ BitVec 32))) (or (exists ((?y4 (_ BitVec 32))) (let ((?v_0 (bvmul (bvneg (_ bv21 32)) x1))) (or (or (and (or (bvslt (bvadd (bvmul (_ bv91 32) ?y4) (bvmul (bvneg (_ bv4 32)) x1)) (_ bv34 32)) (bvsge (bvadd (bvadd (bvmul (_ bv93 32) ?y4) (bvmul (bvneg (_ bv88 32)) ?y3)) (bvmul (bvneg (_ bv1 32)) x1)) (_ bv91 32))) (bvsgt (bvadd (bvmul (_ bv3 32) ?y4) (bvmul (_ bv63 32) ?y3)) (bvneg (_ bv96 32)))) (and (bvsle (bvadd (bvmul (_ bv84 32) ?y3) (bvmul (bvneg (_ bv34 32)) x1)) (_ bv56 32)) (or (or (= (bvadd (bvadd (bvmul (bvneg (_ bv97 32)) ?y4) (bvmul (_ bv39 32) ?y3)) (bvmul (bvneg (_ bv92 32)) x1)) (_ bv0 32)) (bvsgt (bvadd (bvadd (bvmul (_ bv51 32) ?y4) (bvmul (_ bv18 32) ?y3)) (bvmul (_ bv39 32) x1)) (_ bv0 32))) (and (bvsge (bvadd (bvmul (_ bv83 32) ?y4) (bvmul (_ bv77 32) x1)) (_ bv46 32)) (bvsgt (bvadd (bvmul (bvneg (_ bv69 32)) ?y4) (bvmul (_ bv36 32) ?y3)) (_ bv0 32)))))) (or (or (or (or (bvsgt (bvadd (bvmul (_ bv57 32) ?y4) (bvmul (bvneg (_ bv11 32)) ?y3)) (_ bv36 32)) (bvsgt (bvadd (bvadd (bvmul (_ bv85 32) ?y4) (bvmul (bvneg (_ bv49 32)) ?y3)) (bvmul (bvneg (_ bv2 32)) x1)) (_ bv0 32))) (bvslt (bvadd (bvmul (_ bv38 32) ?y4) (bvmul (_ bv64 32) x1)) (bvneg (_ bv32 32)))) (and (or (bvsge (bvmul (bvneg (_ bv51 32)) ?y4) (_ bv88 32)) (bvsle (bvadd (bvadd (bvmul (_ bv35 32) ?y4) (bvmul (_ bv89 32) ?y3)) (bvmul (_ bv59 32) x1)) (bvneg (_ bv88 32)))) (or (bvsge (bvadd (bvmul (bvneg (_ bv62 32)) ?y3) (bvmul (_ bv40 32) x1)) (_ bv10 32)) (bvsgt (bvadd (bvmul (_ bv2 32) ?y4) (bvmul (_ bv51 32) ?y3)) (bvneg (_ bv60 32)))))) (or (or (not (= (bvadd (bvadd (bvmul (_ bv29 32) ?y4) (bvmul (bvneg (_ bv61 32)) ?y3)) (bvmul (_ bv22 32) x1)) (_ bv26 32))) (or (= (bvadd (bvadd (bvmul (bvneg (_ bv85 32)) ?y4) (bvmul (_ bv55 32) ?y3)) (bvmul (bvneg (_ bv100 32)) x1)) (bvneg (_ bv10 32))) (bvsgt (bvadd (bvadd (bvmul (bvneg (_ bv48 32)) ?y4) (bvmul (bvneg (_ bv86 32)) ?y3)) ?v_0) (_ bv72 32)))) (and (= ?v_0 (_ bv24 32)) (bvsge (bvadd (bvmul (bvneg (_ bv23 32)) ?y4) (bvmul (_ bv75 32) ?y3)) (_ bv0 32)))))))) (forall ((?y4 (_ BitVec 32))) (or (or (bvsgt (bvadd (bvadd (bvmul (bvneg (_ bv82 32)) ?y4) (bvmul (_ bv11 32) ?y3)) (bvmul (_ bv73 32) x1)) (bvneg (_ bv31 32))) (or (not (= (bvadd (bvmul (_ bv38 32) ?y4) (bvmul (bvneg (_ bv31 32)) x1)) (_ bv90 32))) (not (= (bvadd (bvadd (bvmul (_ bv25 32) ?y4) (bvmul (bvneg (_ bv52 32)) ?y3)) (bvmul (bvneg (_ bv8 32)) x1)) (bvneg (_ bv12 32)))))) (or (and (and (and (bvsle (bvmul (_ bv94 32) ?y4) (bvneg (_ bv25 32))) (bvsgt (bvadd (bvadd (bvmul (_ bv91 32) ?y4) (bvmul (_ bv39 32) ?y3)) (bvmul (_ bv66 32) x1)) (_ bv0 32))) (or (= (bvadd (bvmul (bvneg (_ bv60 32)) ?y4) (bvmul (bvneg (_ bv45 32)) ?y3)) (_ bv0 32)) (bvsle (bvadd (bvmul (bvneg (_ bv70 32)) ?y4) (bvmul (_ bv83 32) x1)) (_ bv74 32)))) (or (and (not (= (bvadd (bvmul (_ bv85 32) ?y4) (bvmul (_ bv70 32) ?y3)) (bvneg (_ bv3 32)))) (bvslt (bvadd (bvmul (_ bv75 32) ?y4) (bvmul (bvneg (_ bv3 32)) ?y3)) (_ bv0 32))) (or (not (= (bvadd (bvadd (bvmul (_ bv28 32) ?y4) (bvmul (_ bv49 32) ?y3)) (bvmul (_ bv80 32) x1)) (bvneg (_ bv45 32)))) (not (= (bvadd (bvadd (bvmul (_ bv82 32) ?y4) (bvmul (bvneg (_ bv30 32)) ?y3)) (bvmul (bvneg (_ bv71 32)) x1)) (bvneg (_ bv78 32))))))) (or (or (not (= (bvmul (bvneg (_ bv37 32)) x1) (_ bv29 32))) (bvsgt (bvadd (bvmul (_ bv67 32) ?y3) (bvmul (bvneg (_ bv83 32)) x1)) (bvneg (_ bv25 32)))) (not (= (bvadd (bvadd (bvmul (_ bv46 32) ?y4) (bvmul (_ bv35 32) ?y3)) (bvmul (_ bv63 32) x1)) (_ bv63 32))))))))))
+(check-sat)
+(exit)

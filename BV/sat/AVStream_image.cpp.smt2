@@ -1,0 +1,11 @@
+(set-info :smt-lib-version 2.6)
+(set-logic BV)
+(set-info :source | Software ranking function synthesis problems.
+These benchmarks stem from an evaluation described in Wintersteiger, Hamadi, de Moura: Efficiently solving quantified bit-vector formulas, FMSD 42(1), 2013.
+The software models that were used are from a previous evaluation of termination proving tools described in Cook, Kroening, Ruemmer, Wintersteiger: Ranking Function Synthesis for Bit-Vector Relations, TACAS 2010.
+ |)
+(set-info :category "industrial")
+(set-info :status sat)
+(assert (exists ((cpp__main__c__main__1__CurSpaceX_36_C (_ BitVec 32))) (exists ((cpp__main__c__main__1__1__mask_36_C (_ BitVec 32))) (forall ((termination__pre__1__cpp__main__c__main__1__1__mask (_ BitVec 32))) (forall ((termination__pre__1__cpp__main__c__main__1__CurSpaceX (_ BitVec 32))) (forall ((termination__nondet1 (_ BitVec 32))) (forall ((cpp__main__c__main__1__1__mask_35_0 (_ BitVec 32))) (forall ((cpp__main__c__main__1__CurSpaceX_35_0 (_ BitVec 32))) (forall ((cpp__main__c__main__1__1__mask (_ BitVec 32))) (forall ((cpp__main__c__main__1__CurSpaceX (_ BitVec 32))) (=> (and (= termination__pre__1__cpp__main__c__main__1__CurSpaceX cpp__main__c__main__1__CurSpaceX_35_0) (= termination__pre__1__cpp__main__c__main__1__1__mask cpp__main__c__main__1__1__mask_35_0) (and (not (= cpp__main__c__main__1__1__mask_35_0 (_ bv0 32))) (not (= cpp__main__c__main__1__CurSpaceX_35_0 (_ bv0 32)))) (= cpp__main__c__main__1__CurSpaceX termination__nondet1) (= cpp__main__c__main__1__1__mask (bvlshr cpp__main__c__main__1__1__mask_35_0 (_ bv1 32)))) (bvslt (bvadd ((_ sign_extend 2) (bvmul ((_ sign_extend 33) cpp__main__c__main__1__CurSpaceX_36_C) ((_ zero_extend 33) cpp__main__c__main__1__CurSpaceX))) ((_ sign_extend 2) (bvmul ((_ sign_extend 33) cpp__main__c__main__1__1__mask_36_C) ((_ zero_extend 33) cpp__main__c__main__1__1__mask)))) (bvadd ((_ sign_extend 2) (bvmul ((_ sign_extend 33) cpp__main__c__main__1__CurSpaceX_36_C) ((_ zero_extend 33) termination__pre__1__cpp__main__c__main__1__CurSpaceX))) ((_ sign_extend 2) (bvmul ((_ sign_extend 33) cpp__main__c__main__1__1__mask_36_C) ((_ zero_extend 33) termination__pre__1__cpp__main__c__main__1__1__mask)))))) ) ) ) ) ) ) ) ) ))
+(check-sat)
+(exit)

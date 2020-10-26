@@ -1,0 +1,35 @@
+(set-info :smt-lib-version 2.6)
+(set-logic AUFLIA)
+(set-info :source |Generator: Rodin SMT Plug-in|)
+(set-info :license "https://creativecommons.org/licenses/by-nc/4.0/")
+(set-info :category "industrial")
+(set-info :status sat)
+
+(declare-fun f (Int Int) Bool)
+(declare-fun g (Int Int) Bool)
+(declare-fun adr_r () Int)
+(declare-fun adr_w () Int)
+(declare-fun r () Int)
+(declare-fun u () Int)
+
+(assert (! (or 
+               (= adr_w 1) 
+               (= adr_w 2) 
+               (= adr_w 3) 
+               (= adr_w 4) 
+               (= adr_w 5))
+         :named hyp1))
+(assert (! (or 
+               (= adr_r 1) 
+               (= adr_r 2) 
+               (= adr_r 3))
+         :named hyp2))
+(assert (! (g r u)
+         :named hyp3))
+(assert (! (not 
+               (exists ((x Int)) 
+                   (f r x)))
+         :named goal))
+(check-sat)
+(exit)
+

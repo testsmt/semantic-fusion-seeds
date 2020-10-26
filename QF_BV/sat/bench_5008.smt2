@@ -1,0 +1,16 @@
+(set-info :smt-lib-version 2.6)
+(set-logic QF_BV)
+(set-info :source |
+ Patrice Godefroid, SAGE (systematic dynamic test generation)
+ For more information: http://research.microsoft.com/en-us/um/people/pg/public_psfiles/ndss2008.pdf
+|)
+(set-info :category "industrial")
+(set-info :status sat)
+(declare-fun T4_11167 () (_ BitVec 32))
+(declare-fun T1_11167 () (_ BitVec 8))
+(declare-fun T1_11168 () (_ BitVec 8))
+(declare-fun T1_11169 () (_ BitVec 8))
+(declare-fun T1_11170 () (_ BitVec 8))
+(assert (let ((?v_0 (bvadd T4_11167 (_ bv4 32)))) (let ((?v_4 (bvadd ?v_0 (_ bv42 32))) (?v_3 (bvsub (_ bv4294967295 32) ((_ zero_extend 24) (ite (bvult (bvsub (_ bv4294967295 32) ?v_0) (_ bv0 32)) (_ bv1 8) (_ bv0 8))))) (?v_2 (bvsub (_ bv4294967295 32) ((_ zero_extend 24) (ite (bvult (bvsub (_ bv4294967295 32) T4_11167) (_ bv0 32)) (_ bv1 8) (_ bv0 8)))))) (let ((?v_1 (bvsub (_ bv4294967295 32) ((_ zero_extend 24) (ite (bvult (bvsub (_ bv4294967295 32) ?v_4) (_ bv0 32)) (_ bv1 8) (_ bv0 8)))))) (and true (= T4_11167 (bvor (bvshl (bvor (bvshl (bvor (bvshl ((_ zero_extend 24) T1_11170) (_ bv8 32)) ((_ zero_extend 24) T1_11169)) (_ bv8 32)) ((_ zero_extend 24) T1_11168)) (_ bv8 32)) ((_ zero_extend 24) T1_11167))) (bvslt (_ bv4294967295 32) (bvadd ?v_0 (_ bv61 32))) (bvult (_ bv0 32) ?v_1) (bvule (_ bv0 32) ?v_1) (bvult (_ bv0 32) ?v_2) (bvule (_ bv0 32) ?v_2) (bvult (_ bv0 32) ?v_3) (bvule (_ bv0 32) ?v_3) (not (= ?v_4 (_ bv4294967295 32))) (bvule (_ bv0 32) T4_11167) (not (= T4_11167 (_ bv11151 32))) (bvule T4_11167 (_ bv11151 32)) (not (= T4_11167 (_ bv4294967295 32))) (not (= ?v_0 (_ bv4294967295 32))) (bvule (_ bv0 32) ?v_0))))))
+(check-sat)
+(exit)

@@ -1,0 +1,16 @@
+(set-info :smt-lib-version 2.6)
+(set-logic QF_BV)
+(set-info :source |
+ Patrice Godefroid, SAGE (systematic dynamic test generation)
+ For more information: http://research.microsoft.com/en-us/um/people/pg/public_psfiles/ndss2008.pdf
+|)
+(set-info :category "industrial")
+(set-info :status unsat)
+(declare-fun T1_10710 () (_ BitVec 8))
+(declare-fun T1_10686 () (_ BitVec 8))
+(declare-fun T1_10693 () (_ BitVec 8))
+(declare-fun T1_10696 () (_ BitVec 8))
+(declare-fun T1_10707 () (_ BitVec 8))
+(assert (let ((?v_0 ((_ zero_extend 24) (_ bv2 8)))) (let ((?v_16 (bvand (bvor (bvshl (bvand ((_ zero_extend 24) T1_10710) (_ bv255 32)) ?v_0) (_ bv3 32)) (_ bv7 32))) (?v_5 ((_ zero_extend 24) (_ bv1 8))) (?v_4 (bvand (bvand ((_ zero_extend 24) T1_10686) (_ bv255 32)) (_ bv31 32)))) (let ((?v_8 (bvadd ?v_4 ?v_5))) (let ((?v_10 (bvadd ?v_8 (_ bv267 32))) (?v_2 (bvand (bvor (bvshl (bvand ((_ zero_extend 24) T1_10693) (_ bv255 32)) ?v_0) (_ bv3 32)) (_ bv7 32)))) (let ((?v_13 (bvadd ?v_2 (_ bv26 32))) (?v_1 (bvand (bvshl (bvand ((_ zero_extend 24) T1_10696) (_ bv255 32)) ?v_0) (_ bv7 32)))) (let ((?v_7 (bvadd ?v_1 (_ bv3 32)))) (let ((?v_12 (bvadd ?v_7 ?v_13))) (let ((?v_11 (bvadd ?v_12 (_ bv38 32))) (?v_3 (bvand (bvshl (bvand ((_ zero_extend 24) T1_10707) (_ bv255 32)) ?v_5) (_ bv3 32)))) (let ((?v_6 (bvadd ?v_3 (_ bv3 32)))) (let ((?v_9 (bvadd ?v_6 ?v_11))) (let ((?v_15 (bvadd ?v_9 (_ bv6 32))) (?v_14 (bvadd ?v_16 (_ bv3 32)))) (and true (bvsle ?v_14 (_ bv0 32)) (not (= ?v_1 (_ bv4294967295 32))) (bvslt (_ bv0 32) (bvadd ?v_2 (_ bv3 32))) (not (= ?v_3 (_ bv4294967295 32))) (bvslt (_ bv0 32) ?v_7) (not (= ?v_2 (_ bv4294967295 32))) (not (= ?v_4 (_ bv4294967295 32))) (bvslt (_ bv0 32) ?v_6) (bvsle ?v_8 (_ bv30 32)) (bvslt ?v_9 ?v_10) (bvsle ?v_9 ?v_10) (bvslt ?v_11 ?v_10) (bvsle (bvadd ?v_12 (_ bv37 32)) ?v_10) (bvslt ?v_12 ?v_10) (bvsle ?v_12 ?v_10) (bvslt ?v_13 ?v_10) (bvsle (bvadd ?v_2 (_ bv25 32)) ?v_10) (bvslt (_ bv0 32) ?v_10) (bvslt ?v_15 ?v_10) (bvsle (bvadd ?v_14 ?v_15) ?v_10) (not (= ?v_16 (_ bv4294967295 32))))))))))))))))
+(check-sat)
+(exit)
